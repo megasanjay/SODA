@@ -923,7 +923,7 @@ function loadAwardData() {
     });
     var base = Airtable.base('appiYd1Tz9Sv857GZ');
     base("sparc_members").select({
-        view: 'All members'
+        view: 'All members (ungrouped)'
     }).eachPage(function page(records, fetchNextPage) {
         records.forEach(function(record) {
           if (record.get('Project_title')!==undefined) {
