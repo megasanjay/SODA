@@ -1,15 +1,21 @@
 {
-  "name": "SODA",
+  "name": "soda",
   "productName": "SODA",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "Keep Calm and Curate",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "keywords": [],
   "author": "SODA Team",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/megasanjay/SODA.git"
+  },
   "config": {
     "forge": {
       "make_targets": {
@@ -54,6 +60,7 @@
     "electron-log": "^4.2.2",
     "electron-settings": "^3.2.0",
     "electron-shortcut-normalizer": "^1.0.0",
+    "electron-updater": "^4.3.5",
     "fomantic-ui": "^2.8.7",
     "glob": "^7.1.6",
     "html2canvas": "^1.0.0-rc.5",
@@ -67,6 +74,7 @@
   },
   "devDependencies": {
     "electron": "6.0.0",
+    "electron-builder": "^22.9.1",
     "electron-packager": "^14.0.6",
     "electron-rebuild": "^1.11.0"
   }
